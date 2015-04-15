@@ -26,7 +26,7 @@ try {
 }
 
 echo "\n\nEnter the received code: ";
-$code = fgets(STDIN);
+$code = str_replace("-", "", fgets(STDIN));
 
 try {
     $result = $w->codeRegister(trim($code));
